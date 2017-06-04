@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="description" content="Vidly Videos" />
+</head>
+<body>
+
+
+    @Html.Partial("_NavBar")
+    <div class="container body-content">
+
+
+
+
+
+        <hr>
+        <footer>
+            <p class="">© 2017 - Vidly</p>
+        </footer>
+        @RenderBody()
+        <hr />		         <hr />
+        <footer>
+                      <p>&copy; @DateTime.Now.Year - Vidly</p>
+            </footer>
+
+    </div>
+
+    @Scripts.Render("~/bundles/lib")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
